@@ -1,0 +1,225 @@
+.webp .background {
+    background-image: url('../../images/banner.webp');
+}
+
+.no-webp .background {
+    background-image: url('../../images/banner.jpeg');
+}
+
+.background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    padding-top: 8rem;
+    @include tablet {
+        padding-top: 0;
+        height: 70rem;
+    }
+}
+
+.container-header {
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        .bar {
+            width: 100%;
+            position: fixed;
+        }
+        .nav-principal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+.bar {
+    position: relative;
+    top: 0;
+    background-color: $bgHeader;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 8rem;
+    position: fixed;
+    top: 0;
+    font-size: 2.5rem;
+    padding: 2rem;
+    background-color: $bgHeader;
+    z-index: 1000;
+    .waves {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        color: $white;
+        img {
+            width: 5rem;
+            margin-right: 1rem;
+        }
+    }
+    .btn-menu {
+        text-align: left;
+        display: inline-block;
+        overflow: hidden;
+        color: $white;
+    }
+    @include tablet {
+        display: block;
+        text-align: center;
+        position: inherit;
+        background-color: transparent;
+        width: 100%;
+        .btn-menu {
+            display: none;
+        }
+        .waves {
+            img {
+                width: 5rem;
+            }
+        }
+    }
+    @include desktop {
+        width: 40%;
+    }
+}
+
+.logo-secondary {
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+.nav {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    overflow-y: auto;
+    height: calc(100% - 8rem);
+    z-index: 1000;
+    left: -100%;
+    ul {
+        li {
+            display: block;
+            border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+            transition: all 300ms;
+            .content-dropdown {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                i {
+                    margin: 1rem;
+                }
+            }
+            a {
+                color: $white;
+                // display: block;
+                display: flex;
+                justify-content: center;
+                padding: 2rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                i {
+                    margin: 0 0.5rem;
+                }
+            }
+            &:hover {
+                background: $bgNav;
+            }
+            .children {
+                display: none;
+                background: $bgSubMenu;
+                position: relative;
+                width: 100%;
+                z-index: 1000;
+                li {
+                    display: block;
+                    overflow: hidden;
+                    border-bottom: rgba(255, 255, 255, 0.5);
+                    a {
+                        font-size: 1.6rem;
+                        padding: 1.8rem 1.5rem;
+                    }
+                }
+            }
+            &:hover .children {
+                display: none;
+            }
+        }
+    }
+    @include tablet {
+        left: 0;
+        position: inherit;
+        height: auto;
+        overflow: inherit;
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {
+                position: relative;
+                border-bottom: none;
+                height: 100%;
+                .content-dropdown {
+                    a {
+                        padding-right: 1rem;
+                    }
+                    i {
+                        padding-right: 2rem;
+                        margin: 0;
+                    }
+                }
+                .children {
+                    width: 150%;
+                }
+                &:hover .children {
+                    display: block;
+                    position: absolute;
+                }
+            }
+            .perfilMenu {
+                .children {
+                    width: 170%;
+                    left: -70%;
+                }
+            }
+        }
+    }
+}
+
+.headerText {
+    width: 100%;
+    color: $white;
+    margin-bottom: $space;
+    text-align: center;
+    transition: all 300ms;
+    h1 {
+        font-weight: $regular;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    p {
+        font-size: 3rem;
+        margin: 0;
+        transition: all 300ms;
+    }
+    @include tablet {
+        margin-top: 15rem;
+    }
+}

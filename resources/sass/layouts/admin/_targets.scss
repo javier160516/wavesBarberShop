@@ -1,0 +1,49 @@
+.titleAdmin {
+    h1 {
+        text-align: center;
+        font-family: $fontBody;
+    }
+}
+
+.targets {
+    width: 100%;
+    margin-top: $space;
+    text-align: center;
+    .target {
+        width: 90%;
+        padding: 2rem 2rem 1rem 2rem;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 2px #ccc;
+        border-radius: 1rem;
+        color: $white;
+        span {
+            font-size: 3rem;
+            font-weight: $bold;
+        }
+        p {
+            font-size: 1.8rem;
+        }
+    }
+    @include tablet {
+        @include grid(3, $space / 2);
+    }
+    @include desktop {
+        .target {
+            width: 70%;
+        }
+    }
+}
+
+.blue {
+    background-color: #325d88;
+}
+
+.green {
+    background-color: #93c54b;
+}
+
+.orange {
+    background-color: #f47c3c;
+}

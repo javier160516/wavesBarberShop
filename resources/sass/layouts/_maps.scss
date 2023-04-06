@@ -1,0 +1,29 @@
+.webp .ubication {
+    background-image: url('../../images/banner-products.webp');
+}
+
+.no-webp .ubication {
+    background-image: url('../../images/banner-products.jpg');
+}
+
+.ubication {
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    background-color: $blackGray;
+    h2 {
+        color: $white;
+        text-align: center;
+    }
+    iframe {
+        width: 100%;
+    }
+}
+
+.container-ubication {
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: $space 0 0 0;
+}

@@ -1,0 +1,149 @@
+.containerAdmin {
+    height: 100vh;
+    overflow: hidden;
+    .header {
+        height: auto;
+    }
+    .container-header {
+        height: auto;
+    }
+}
+
+.headerAdmin {
+    padding-top: 0;
+}
+
+.containerMain {
+    display: flex;
+    height: 100%;
+    .containerr {
+        overflow-y: auto;
+        padding-bottom: 5rem;
+        width: 100%;
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+        &::-webkit-scrollbar:vertical {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #797979;
+            border-radius: 20px;
+            border: 2px solid #f1f2f3;
+        }
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+    }
+}
+
+.container-headerAdmin {
+    .navegation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        border-bottom: 1px solid $blackGray;
+        background-color: $blueHeader;
+        color: white;
+        position: inherit;
+        width: 100%;
+        a {
+            font-size: 2rem;
+            color: $white;
+        }
+        #logo {
+            display: inline-block;
+            width: auto;
+        }
+        #logoDesktop {
+            display: none;
+        }
+        .title {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            font-family: $fontPrincipal;
+        }
+        .icon-user {
+            i {
+                font-size: 3rem;
+            }
+        }
+        @include tablet {
+            #logo {
+                display: none;
+            }
+            #logoDesktop {
+                display: inline-block;
+            }
+            position: inherit;
+        }
+    }
+}
+
+.containerNav {
+    height: 100%;
+    .nav {
+        height: 100%;
+        padding: 2rem;
+        width: auto;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        width: 80%;
+        overflow-y: auto;
+        background-color: $blueHeader;
+        ul {
+            color: $white;
+            span {
+                display: flex;
+                width: 100%;
+                color: rgba(#ccc, 0.5);
+                border-bottom: 1px solid rgba(#ccc, 0.5);
+                padding-bottom: 0.5rem;
+            }
+            li {
+                width: 100%;
+                // padding: 2rem;
+                font-size: 1.8rem;
+                border: none;
+                a {
+                    text-transform: capitalize;
+                    justify-content: left;
+                }
+                i {
+                    margin-right: 1rem;
+                }
+            }
+        }
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+        &::-webkit-scrollbar:vertical {
+            width: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: lighten($blue, 10);
+            border-radius: 20px;
+            // border: none;
+        }
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+    }
+    @include tablet {
+        .nav {
+            position: inherit;
+            height: 100%;
+            margin-top: 0;
+            width: auto;
+            ul {
+                display: block;
+            }
+        }
+    }
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+}

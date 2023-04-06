@@ -1,0 +1,112 @@
+.containerDates {
+    margin-bottom: 5rem;
+    h1 {
+        text-align: center;
+        font-size: 4rem;
+    }
+    .addProduct {
+        a {
+            color: white;
+            background-color: green;
+            &:hover {
+                background-color: darken(green, 3);
+            }
+        }
+    }
+}
+
+.searcher {
+    .select {
+        display: block;
+        width: 80%;
+        padding: 1rem 1rem;
+        color: #444;
+        line-height: 1.3;
+        margin: 2rem auto;
+        border: 2px solid #ccc;
+        box-shadow: 0 1px 0 1px rgba(0, 0, 0, .03);
+        border-radius: 0.3rem;
+        font-size: 1.6rem;
+        &:focus {
+            border: 2px solid #ccc;
+            box-shadow: 0 0 px;
+            outline: none;
+        }
+        option {
+            text-transform: capitalize;
+            font-size: 1.6rem;
+            padding: 0.6rem;
+            &:hover {
+                background-color: $blue;
+            }
+        }
+    }
+    input {
+        display: block;
+        width: 80%;
+        padding: 1rem 1.5rem;
+        border: 2px solid #ccc;
+        border-radius: 0.5rem;
+        margin: 2rem auto;
+        height: 4rem;
+        &:focus {
+            outline: none;
+            border-color: #bbb;
+        }
+    }
+    button {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        background-color: transparent;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 300ms;
+        &:hover {
+            background-color: darken($white, 9);
+            border-color: #444;
+        }
+        i {
+            width: 100%;
+            height: 100%;
+            padding: 0.5rem 1rem;
+        }
+    }
+    @include phone {
+        form {
+            // @include grid(2, 2rem);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 2rem;
+        }
+        .select {
+            width: 48%;
+            margin: 0;
+        }
+        .form-group {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            input {
+                width: auto;
+                margin: 0 0.5rem 0 0;
+            }
+            button {
+                margin: 0;
+                i {
+                    padding: 1rem 1.5rem;
+                }
+            }
+            select {
+                margin: 0 0.5rem 0 0;
+            }
+        }
+    }
+    @include tablet {
+        .select {
+            width: auto;
+        }
+    }
+}

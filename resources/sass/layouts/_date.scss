@@ -1,0 +1,256 @@
+.container-date {
+    width: 100%;
+    background-color: $black;
+    .image-date {
+        height: 40rem;
+        background-image: url('../../images/date.jpeg');
+        background-position: center center;
+        background-size: cover;
+    }
+    .makeDate {
+        color: $white;
+        padding-bottom: 3rem;
+        @include tablet {
+            overflow-y: auto;
+            height: 100vh;
+            margin-bottom: 3rem;
+        }
+    }
+    @include tablet {
+        @include grid(2,
+        $space / 2);
+        .image-date {
+            height: 100%;
+        }
+    }
+}
+
+.tabs {
+    width: 90%;
+    margin: 0 auto;
+    @include grid(1,
+    2rem);
+    @include phone {
+        @include grid(3,
+        2rem);
+    }
+    margin-top: 2rem;
+    button {
+        color: $white;
+        background-color: rgba($blackGray, 0.6);
+        font-size: 1.8rem;
+        padding: 1rem;
+        text-align: center;
+        border: none;
+        font-family: $fontBody!important;
+        &.active {
+            background-color: lighten($blackGray, 6);
+        }
+        &:hover {
+            background-color: lighten($blackGray, 6);
+            cursor: pointer;
+        }
+    }
+}
+
+.header-date {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba($brownLight, .6);
+    margin: 0 auto;
+    @include tablet {
+        margin-right: $space / 2;
+    }
+    a {
+        width: 10%;
+        height: 100%;
+        text-align: left;
+        font-size: 1.8rem;
+        vertical-align: middle;
+        color: $white;
+        margin-left: 1rem;
+    }
+    h1 {
+        width: 90%;
+        font-weight: $regular;
+        text-align: center;
+        span {
+            width: 90%;
+        }
+    }
+}
+
+.section {
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+    h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: 2rem;
+    }
+}
+
+.form {
+    .form-group,
+    .multiselect {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        label {
+            display: block;
+            width: 100%;
+            padding-bottom: 0.5rem;
+            margin-left: 0.3rem;
+        }
+        input[type="text"],
+        input[type="time"],
+        input[type="date"],
+        input[type="tel"],
+        #selectType,
+        #typePay {
+            width: 100%;
+        }
+        input,
+        .ms-parent,
+        #selectType,
+        #typePay {
+            display: block;
+            background-color: rgba($blackGray, 0.6);
+            border: 1px solid $blackGray;
+            padding: 0.7rem;
+            border-radius: 0.5rem;
+            color: $white;
+            &:focus {
+                outline: none;
+            }
+        }
+        h3 {
+            margin-top: 3rem;
+            font-size: 1.8rem;
+        }
+        a {
+            position: absolute;
+            color: $white;
+            padding-top: 1rem;
+            &:hover {
+                color: $lightColor;
+            }
+        }
+    }
+    .containerRadio {
+        display: flex;
+        // align-items: center;
+        input[type="radio"] {
+            width: 3rem;
+            height: 1.6rem;
+        }
+        label {
+            text-align: left;
+            width: auto;
+            margin-right: 3rem;
+            i {
+                font-size: 2.7rem;
+                vertical-align: middle;
+            }
+        }
+    }
+    @include tablet {
+        .form-group-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            .form-group {
+                width: 90%;
+            }
+        }
+    }
+}
+
+.multiselect .ms-parent .ms-choice,
+.ms-parent .ms-choice {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    color: $white;
+    span {
+        padding-top: 0.5rem;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.ms-parent {
+    width: 100%!important;
+    height: 3.6rem;
+    transition: all 600ms;
+}
+
+.ms-drop {
+    background: rgba($blackGray, 0.6)!important;
+    color: $white!important;
+    border: 1px solid $blackGray!important;
+    margin-left: -7.2px!important;
+    padding-top: 1rem!important;
+    span {
+        margin-left: 1rem;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    button {
+        background-color: rgba($blackGray, 0.6);
+        padding: 1rem 2rem;
+        display: block;
+        text-align: center;
+        color: $white;
+        border: none;
+        text-transform: uppercase;
+        &.hide {
+            visibility: hidden;
+        }
+        &:hover {
+            background-color: lighten($blackGray, 6);
+            cursor: pointer;
+        }
+    }
+}
+
+.show-section {
+    display: block!important;
+}
+
+.mb-select {
+    margin-bottom: 15rem;
+}
+
+.makeDate::-webkit-scrollbar,
+.ms-drop ul::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.makeDate::-webkit-scrollbar:vertical,
+.ms-drop ul::-webkit-scrollbar:vertical {
+    width: .5rem;
+}
+
+.makeDate::-webkit-scrollbar-thumb,
+.ms-drop ul::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+}
+
+.makeDate::-webkit-scrollbar-track,
+.ms-drop ul::-webkit-scrollbar-track {
+    border-radius: 10px;
+}

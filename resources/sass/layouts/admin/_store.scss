@@ -1,0 +1,13 @@
+.addProduct {
+    text-align: right;
+    button {
+        background-color: #198754;
+        margin: 1rem 0 0 0;
+        a {
+            color: $white;
+        }
+        &:hover {
+            background-color: darken(#198754, 5);
+        }
+    }
+}

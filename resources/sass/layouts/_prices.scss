@@ -1,0 +1,60 @@
+.prices {
+    background-color: $brownLight;
+}
+
+.container-prices {
+    padding: 4rem 0;
+    h2 {
+        margin-bottom: 0;
+        text-align: center;
+    }
+    @include tablet {
+        .price-wrap {
+            @include grid(2, $space / 2);
+        }
+    }
+    @include desktop {
+        .price-wrap {
+            @include grid(3, $space / 2);
+        }
+    }
+}
+
+.container-price-wrap {
+    padding: $space / 2;
+}
+
+.hairStyling {
+    li {
+        position: relative;
+        h4 {
+            position: relative;
+            font-size: 1.8rem;
+            letter-spacing: 0.5px;
+            margin: 0 0 0.6rem;
+            overflow: hidden;
+            width: 85%;
+            @include phone {
+                &::after {
+                    font-weight: normal;
+                    margin-left: 1rem;
+                    margin-right: 1rem;
+                    position: absolute;
+                    top: 3px;
+                    white-space: nowrap;
+                    width: 0;
+                    content: "----------------" "----------------""----------------""----------------";
+                }
+            }
+        }
+        .price {
+            font-family: "Prata", sans-serif;
+            font-size: 24px;
+            color: #9e8a78;
+            font-weight: 700;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.footer {
+    background-color: $blackGray;
+    padding: 0 $space / 2;
+    p {
+        font-size: 2rem;
+        color: $white;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
+
+.nav-footer {
+    padding-top: $space / 2;
+    text-align: center;
+    ul {
+        li {
+            margin-bottom: 1.5rem;
+            // text-align: center;
+            font-size: 1.8rem;
+            a {
+                color: $white;
+            }
+            &:hover a {
+                color: $lightColor;
+            }
+        }
+    }
+    h4 {
+        color: $white;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    .socials {
+        display: flex;
+        justify-content: space-evenly;
+        color: $white;
+        a {
+            padding: 1.5rem;
+            border: 1px solid $white;
+            border-radius: 50%;
+            i {
+                color: $white;
+                width: 100%;
+                font-size: 2rem;
+            }
+            &:hover i {
+                color: gray;
+            }
+        }
+    }
+    @include tablet {
+        @include grid (2, $space / 2);
+    }
+    @include desktop {
+        .socials {
+            justify-content: center;
+            gap: 2rem;
+        }
+    }
+}
+
+.credits {
+    padding: 0 0 3rem 0;
+    p {
+        font-size: 1.8rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid $white;
+    }
+}

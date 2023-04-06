@@ -1,0 +1,82 @@
+.table {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 0px;
+    thead {
+        display: none;
+    }
+    tr {
+        margin: 1.5rem 0;
+        border: 1px solid #ccc;
+        display: block;
+    }
+    th,
+    td {
+        padding: 1rem;
+    }
+    td {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        text-align: right;
+        &:last-child {
+            border-bottom: 0px;
+        }
+        &:before {
+            content: attr(data-label);
+            font-weight: $bold;
+            float: left;
+        }
+        i {
+            background-color: $blackGray;
+            color: $white;
+            border-radius: 50%;
+            padding: 1rem;
+            margin-left: 0.5rem;
+            &:hover {
+                background-color: lighten($blackGray, 5)
+            }
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+    }
+    @include tablet {
+        thead {
+            display: table-header-group;
+            padding: 2rem;
+            background-color: $blackGray;
+            color: $white;
+            tr {
+                display: table-row;
+            }
+            th {
+                padding: 1.5rem;
+            }
+        }
+        tbody {
+            tr {
+                display: table-row;
+                &:hover {
+                    background-color: darken($white, 6);
+                }
+            }
+            td {
+                display: table-cell;
+                text-align: center;
+                &:before {
+                    content: none;
+                }
+                i {
+                    margin-bottom: 1rem;
+                    @include desktop {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

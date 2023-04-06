@@ -1,0 +1,123 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $fontBody;
+    font-size: 1.6rem;
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: $fontPrincipal;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: $blueDark;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    width: min(90%, 120rem);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.positionR {
+    position: relative;
+}
+
+.z-index {
+    z-index: 0;
+}
+
+.d-none {
+    display: none!important;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    border: 1px solid $white;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.hAuto {
+    @include tablet {
+        height: auto!important;
+    }
+}
+
+.positionRelative {
+    position: relative!important;
+    @include tablet {
+        position: relative!important;
+    }
+}
+
+.positionFixed {
+    @include tablet {
+        position: fixed!important;
+    }
+}
+
+.pt-0 {
+    padding-top: 0!important;
+}
+
+.bg-transparent {
+    background-color: transparent!important;
+}
+
+.bg-black {
+    background-color: $black;
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.swal2-popup {
+    font-size: 1.5rem!important;
+}

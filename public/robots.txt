@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /address/*
+Disallow: /payment/*
+Disallow: /summary/*
+
+Sitemap-agent: https://wavesbarbershop.online/sitemap.xml
